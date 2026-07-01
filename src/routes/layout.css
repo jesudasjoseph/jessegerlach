@@ -2,8 +2,13 @@
 @plugin '@tailwindcss/typography';
 
 @font-face {
-	font-family: 'Indie Flower';
+	font-family: 'IndieFlower';
 	src: url('IndieFlower-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'ElmsSans';
+	src: url('ElmsSans-Medium.ttf');
 }
 
 h1,
@@ -12,5 +17,10 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Indie Flower', cursive;
+	font-family: 'IndieFlower';
+}
+
+body,
+p {
+	font-family: 'ElmsSans';
 }
