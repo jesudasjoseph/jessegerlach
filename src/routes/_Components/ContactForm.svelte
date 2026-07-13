@@ -57,9 +57,11 @@
 {/snippet}
 
 {#if submitted}
-	<div class="rounded-lg border border-primary-400 p-4">
+	<div class="p-4">
 		{#if formError === 'submission'}
-			<span class="text-red-700">Error: Please try refreshing the page and submitting again.</span>
+			<span class="text-red-700">
+				Error: Please try refreshing the page and try submitting again.
+			</span>
 		{:else}
 			<span class="text-green-700">
 				Your message has been sent! I will get back to you as soon as possible.
