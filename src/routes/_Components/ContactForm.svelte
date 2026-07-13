@@ -26,12 +26,12 @@
 					formError = null;
 				} else {
 					formError = 'submission';
-					console.error(data.message);
+					throw Error('Form submission failed');
 				}
 			})
 			.catch((e) => {
-				console.error(e);
 				formError = 'submission';
+				throw e;
 			})
 			.finally(() => {
 				submitted = true;
