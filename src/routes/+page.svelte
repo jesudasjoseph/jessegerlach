@@ -7,6 +7,7 @@
 	import RoyalRoadLogo from '$lib/assets/logos/royal-road.png';
 	import PatreonLogo from '$lib/assets/logos/PATREON_Lockup_Horizontal_BLACK_RGB.png';
 	import ContactForm from './_Components/ContactForm.svelte';
+	import RicklefordCover from '$lib/assets/book-covers/RickleFord-cover.png';
 
 	const SEO_TITLE = 'Jesse Gerlach | Author, Father, Husband, and Storyteller';
 	const SEO_DESCRIPTION =
@@ -125,10 +126,17 @@
 		<ButtonLink href="#contact">Message Me!</ButtonLink>
 	</div>
 
-	<!-- 	<div>
+	<div>
 		<h2 class="mb-8 text-3xl font-bold py-30 text-center">~~~ My Work ~~~</h2>
-		<div></div>
-	</div> -->
+		<div>
+			<div class="relative cover w-fit overflow-hidden">
+				<div
+					class="absolute pointer-events-none cover-effect w-[200%] h-[200%] -left-1/2 -top-1/2"
+				></div>
+				<img src={RicklefordCover} alt="Rickleford Cover" class="mx-auto w-50" />
+			</div>
+		</div>
+	</div>
 
 	<div class="py-30">
 		<div id="contact" class="relative p-4 max-w-4xl mx-auto">
@@ -139,3 +147,27 @@
 		</div>
 	</div>
 </main>
+
+<style>
+	.cover {
+		transition: transform 0.5s ease-in;
+	}
+	.cover:hover {
+		transform: matrix(0.95, -0.04, 0, 1, 0, 0);
+	}
+
+	.cover-effect {
+		opacity: 0.25;
+		transition:
+			background-position 0.5s ease-in,
+			transform 0.5s ease-in;
+		background-size: 400% 400%;
+		background-position: 0% 0%;
+		background-image: linear-gradient(50deg, transparent 48%, gray 50%, white 52%, transparent 54%);
+	}
+
+	.cover:hover .cover-effect {
+		background-position: 50% 50%;
+		transform: rotate(10deg);
+	}
+</style>
