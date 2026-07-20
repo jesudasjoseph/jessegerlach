@@ -13,7 +13,7 @@
 </script>
 
 <a
-	class="p-3 border border-gray-300 hover:bg-amber-200 cursor-pointer lg:text-3xl shadow"
+	class="p-3 border border-gray-300 hover:bg-amber-200 cursor-pointer lg:text-3xl shadow w-fit"
 	style="transform: rotate({rotation}deg);"
 	{href}
 	{target}

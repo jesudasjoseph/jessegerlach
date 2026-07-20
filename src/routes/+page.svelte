@@ -8,6 +8,12 @@
 	import PatreonLogo from '$lib/assets/logos/PATREON_Lockup_Horizontal_BLACK_RGB.png';
 	import ContactForm from './_Components/ContactForm.svelte';
 	import RicklefordCover from '$lib/assets/book-covers/RickleFord-cover.png';
+	import TheBanisherChronicles0Cover from '$lib/assets/book-covers/TheBanisherChronicles-TheTraitorsReturn-cover.png';
+	import TheOrionDivision0Cover from '$lib/assets/book-covers/TheOrionDivision-OfStormAndRuin-cover.png';
+	import TheSoundShaperSeries2Cover from '$lib/assets/book-covers/TheSoundShaperSeries-TheLabyrinthOfSound-cover.png';
+	import TheSoundShaperSeries1Cover from '$lib/assets/book-covers/TheSoundShaperSeries-TrialOfTheAncients-cover.png';
+	import TheSoundShaperSeries0Cover from '$lib/assets/book-covers/TheSoundShaperSeries-ProjectExodus-cover.png';
+	import Card from './_Components/Card.svelte';
 
 	const SEO_TITLE = 'Jesse Gerlach | Author, Father, Husband, and Storyteller';
 	const SEO_DESCRIPTION =
@@ -126,16 +132,42 @@
 		<ButtonLink href="#contact">Message Me!</ButtonLink>
 	</div>
 
-	<div>
-		<h2 class="mb-8 text-3xl font-bold py-30 text-center">~~~ My Work ~~~</h2>
-		<div>
-			<div class="relative cover w-fit overflow-hidden">
-				<div
-					class="absolute pointer-events-none cover-effect w-[200%] h-[200%] -left-1/2 -top-1/2"
-				></div>
-				<img src={RicklefordCover} alt="Rickleford Cover" class="mx-auto w-50" />
-			</div>
+	<div class="flex flex-col items-center py-30">
+		<h2 class="mb-8 text-3xl font-bold">~~~ My Books ~~~</h2>
+		<div class="flex flex-row flex-wrap items-center justify-center gap-8 m-16">
+			<Card
+				cover={TheSoundShaperSeries0Cover}
+				href="https://www.amazon.com/Project-Exodus-Sound-Shaper-Gerlach/dp/B0BMZP8ZNV"
+			/>
+			<Card
+				cover={TheSoundShaperSeries1Cover}
+				href="https://www.amazon.com/Trial-Ancients-Jesse-Gerlach/dp/B0C9SHLSJD"
+			/>
+			<Card
+				cover={TheSoundShaperSeries2Cover}
+				href="https://www.amazon.com/Labyrinth-Sound-Shaper/dp/B0D97VVMQZ"
+			/>
 		</div>
+		<div class="flex flex-row flex-wrap items-center justify-center gap-8 m-8">
+			<Card
+				cover={RicklefordCover}
+				href="https://www.amazon.com/Rickleford-Jesse-Alexander-Gerlach/dp/B0GQTJY9CV"
+			/>
+			<Card
+				cover={TheBanisherChronicles0Cover}
+				href="https://www.amazon.com/Banisher-Chronicles-Jesse-Alexander-Gerlach/dp/B0GR4RGVWS"
+			/>
+			<Card
+				cover={TheOrionDivision0Cover}
+				href="https://www.amazon.com/Orion-Division-Jesse-Alexander-Gerlach/dp/B0GQTBYF26"
+			/>
+		</div>
+		<ButtonLink href="https://www.royalroad.com/profile/419627" target="_blank">
+			<span class="flex flex-row justify-center items-center gap-2 w-fit">
+				<img src={RoyalRoadLogo} alt="Royal Road Logo" class="h-8" />
+				<span>Find more at Royal Road</span>
+			</span>
+		</ButtonLink>
 	</div>
 
 	<div class="py-30">
@@ -147,27 +179,3 @@
 		</div>
 	</div>
 </main>
-
-<style>
-	.cover {
-		transition: transform 0.5s ease-in;
-	}
-	.cover:hover {
-		transform: matrix(0.95, -0.04, 0, 1, 0, 0);
-	}
-
-	.cover-effect {
-		opacity: 0.25;
-		transition:
-			background-position 0.5s ease-in,
-			transform 0.5s ease-in;
-		background-size: 400% 400%;
-		background-position: 0% 0%;
-		background-image: linear-gradient(50deg, transparent 48%, gray 50%, white 52%, transparent 54%);
-	}
-
-	.cover:hover .cover-effect {
-		background-position: 50% 50%;
-		transform: rotate(10deg);
-	}
-</style>
