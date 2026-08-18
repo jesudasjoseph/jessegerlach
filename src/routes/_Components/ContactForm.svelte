@@ -50,9 +50,9 @@
 	type: string = 'text',
 	required: boolean = false
 )}
-	<div class="mb-4">
-		<label for={name}>{label}:</label>
-		<input {name} id={name} {type} {required} />
+	<div class="mb-4 flex flex-col">
+		<label for={name} class="sr-only">{label}</label>
+		<input {name} id={name} {type} {required} placeholder={label} />
 	</div>
 {/snippet}
 
@@ -70,17 +70,18 @@
 	</div>
 {:else}
 	<form onsubmit={handleSubmit} class="p-8">
-		<h2 class="mb-8 text-3xl font-bold">Send me a message</h2>
+		<h2 class="mb-8 text-3xl font-bold text-orange-500 text-shadow-lg">Send me a message</h2>
 		<input type="hidden" name="access_key" value={env.PUBLIC_WEB3FORMS_ACCESS_KEY} />
 
 		{@render inputwithlabel('Name', 'name', 'text', true)}
 		{@render inputwithlabel('Email', 'email', 'email', true)}
-		<label for="message">Message</label>
+		<label for="message" class="sr-only">Message</label>
 		<textarea
 			name="message"
 			id="message"
+			placeholder="Message..."
 			required
-			class="mb-2 min-h-3xl w-full p-0 border-0 border-b size-fit"></textarea>
+			class="mb-2 h-50 w-full size-fit"></textarea>
 
 		<div class="mb-2 flex flex-col gap-2">
 			{#if formError === 'captcha'}
@@ -88,6 +89,6 @@
 			{/if}
 			<div class="h-captcha" data-captcha="true"></div>
 		</div>
-		<button type="submit" class="cursor-pointer hover:border-b my-2">Send Message</button>
+		<button type="submit" class="btn text-lg">Send Message</button>
 	</form>
 {/if}

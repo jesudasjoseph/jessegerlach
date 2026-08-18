@@ -65,8 +65,8 @@
 
 <main class="p-4 lg:max-w-7xl lg:mx-auto">
 	<div bind:this={sections[0]} class="min-h-screen flex flex-col items-center justify-center">
-		<h1 class="lg:text-[12rem] md:text-[8rem] text-5xl">Jesse Gerlach</h1>
-		<p class="lg:text-4xl md:text-2xl text-lg">Author - Father - Husband</p>
+		<h1 class="lg:text-[10rem] md:text-[8rem] text-5xl text-center">Jesse Gerlach</h1>
+		<p class="lg:text-4xl md:text-2xl text-lg">Author - Husband - Father</p>
 	</div>
 
 	<div class="h-screen/2 py-30">
@@ -93,7 +93,7 @@
 		>
 			<img
 				src={Profile}
-				alt="Stoic headshot of man with red beard and pony tail in the woods."
+				alt="Stoic headshot of Jesse Gerlach with red beard and pony tail in the woods."
 				class="border-4 border-white"
 			/>
 		</div>
@@ -120,7 +120,7 @@
 	<div class="flex flex-row flex-wrap items-center justify-center lg:gap-16 md:gap-8 gap-4">
 		<ButtonLink href="https://www.royalroad.com/profile/419627" target="_blank">
 			<span class="flex flex-row justify-center items-center gap-2">
-				<img src={RoyalRoadLogo} alt="Royal Road Logo" class="h-8" />
+				<img src={RoyalRoadLogo} alt="Royal Road Logo" class="h-8 rounded-md bg-blue-700" />
 				<span>Royal Road</span>
 			</span>
 		</ButtonLink>
@@ -134,7 +134,7 @@
 
 	<div class="flex flex-col items-center py-30">
 		<h2 class="mb-8 text-3xl font-bold">~~~ My Books ~~~</h2>
-		<div class="flex flex-row flex-wrap items-center justify-center gap-8 m-16">
+		<div class="flex flex-row flex-wrap items-center justify-center gap-8 m-8">
 			<Card
 				cover={TheSoundShaperSeries0Cover}
 				href="https://www.amazon.com/Project-Exodus-Sound-Shaper-Gerlach/dp/B0BMZP8ZNV"
@@ -162,19 +162,19 @@
 				href="https://www.amazon.com/Orion-Division-Jesse-Alexander-Gerlach/dp/B0GQTBYF26"
 			/>
 		</div>
+	</div>
+
+	<div class="flex flex-col items-center py-16">
 		<ButtonLink href="https://www.royalroad.com/profile/419627" target="_blank">
 			<span class="flex flex-row justify-center items-center gap-2 w-fit">
-				<img src={RoyalRoadLogo} alt="Royal Road Logo" class="h-8" />
-				<span>Find more at Royal Road</span>
+				<img src={RoyalRoadLogo} alt="Royal Road Logo" class="h-8 rounded-md bg-blue-700" />
+				<span>More on Royal Road</span>
 			</span>
 		</ButtonLink>
 	</div>
 
 	<div class="py-30">
-		<div id="contact" class="relative p-4 max-w-4xl mx-auto">
-			<div
-				class="absolute pointer-events-none left-0 right-0 top-0 bottom-0 rotate-[0.5deg] border border-gray-300"
-			></div>
+		<div class="bg-orange-200 rounded-3xl">
 			<ContactForm />
 		</div>
 	</div>

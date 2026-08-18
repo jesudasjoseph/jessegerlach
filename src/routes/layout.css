@@ -1,24 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Playpen+Sans:wght@100..800&display=swap');
-
 @import 'tailwindcss';
-@plugin '@tailwindcss/typography';
 
-h1 {
-	font-family: 'Indie Flower';
+@layer base {
+	html {
+		@apply bg-gray-900;
+	}
+	body {
+		@apply text-white;
+	}
+	h1,
+	h2,
+	h3 {
+		@apply font-serif font-bold uppercase;
+	}
+
+	body,
+	p {
+		@apply mb-4 font-sans;
+	}
+
+	label {
+		@apply text-lg text-black;
+	}
+
+	input,
+	textarea {
+		@apply rounded border border-orange-300 bg-orange-100 p-4 text-orange-500 placeholder-orange-300;
+	}
 }
 
-body,
-p {
-	font-family: 'Playpen Sans';
-	margin-bottom: 1rem;
-}
+@layer components {
+	.btn {
+		@apply my-2 cursor-pointer rounded-xl bg-orange-400 p-4 transition-colors duration-300 hover:bg-orange-500;
 
-label {
-	font-size: var(--text-lg);
-}
+		box-shadow: 1px 2px black;
 
-input {
-	border: none;
-	border-bottom: 1px solid var(--color-gray-400);
-	padding: 0;
+		&:active {
+			box-shadow: inset 1px 1px 1px var(--color-gray-600);
+		}
+	}
 }
