@@ -174,7 +174,7 @@
 	</div>
 
 	<div class="py-30">
-		<div class="bg-orange-200 rounded-3xl">
+		<div class="bg-orange-200 rounded-3xl" id="contact">
 			<ContactForm />
 		</div>
 	</div>
