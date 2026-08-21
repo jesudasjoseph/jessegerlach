@@ -15,7 +15,7 @@
 	import TheSoundShaperSeries0Cover from '$lib/assets/book-covers/TheSoundShaperSeries-ProjectExodus-cover.png';
 	import Card from './_Components/Card.svelte';
 
-	const SEO_TITLE = 'Jesse Gerlach | Author, Father, Husband, and Storyteller';
+	const SEO_TITLE = 'Jesse Gerlach | Author, Husband, Father';
 	const SEO_DESCRIPTION =
 		'Discover Jesse Gerlach, a storyteller, writer, husband, father, poet, actor, and swordsman whose work spans theatre, literature, and immersive series.';
 
